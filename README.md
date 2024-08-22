@@ -168,7 +168,7 @@ It has been a great journey, and I am looking forward to maintaining `package: o
 
 ## Things I Learned
 
-1. **Flutter Integration Testing: I learned how to write integration tests for Flutter applications, and how to test the HTTP Client using the `package: http_client_conformance_tests`.
+1. **Flutter Integration Testing:** I learned how to write integration tests for Flutter applications, and how to test the HTTP Client using the `package: http_client_conformance_tests`.
 
 2. **JNI Threading Model:** A HUGE thanks to [Hossein Yousefi][HosseinYousefi] (although not the assigned mentor in this project, he went out of his way to review my PRs and schedule demo meetings, and answer all of my doubts) for helping me understand the threading model of JNI, and how to work around it.
 
