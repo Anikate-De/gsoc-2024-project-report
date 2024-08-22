@@ -28,7 +28,7 @@ Finally, the project also aimed at creating a new [WebSocketChannel][wschannel] 
 
 During my initial proposal, the project was broadly divided into four milestones:
 
-1. **Create a bare-bones `package: ok_http`:** Using an FFI package template to create a new package, and setting up the necessary dependencies.
+1. **Create a bare-bones `package:ok_http`:** Using an FFI package template to create a new package, and setting up the necessary dependencies.
 
 2. **Implement the BaseClient Interface and execute requests synchronously:** Not using asynchronous APIs from OkHttp yet, this milestone ensures that the Client was able to execute basic requests.
 
@@ -42,7 +42,7 @@ From the above milestones, the following project flow was expected:
 
 1. Set up the package and dependencies.
 
-2. Identify and generate the JNI Bindings of the required OkHttp APIs using `package: jnigen`.
+2. Identify and generate the JNI Bindings of the required OkHttp APIs using `package:jnigen`.
 
 3. Implement the `BaseClient` interface and execute synchronous requests.
 
@@ -50,11 +50,11 @@ From the above milestones, the following project flow was expected:
 
 5. Stream the response body.
 
-6. Pass all conformance tests in `package: http_client_conformance_tests`.
+6. Pass all conformance tests in `package:http_client_conformance_tests`.
 
-7. Implement the `WebSocket` interface from `package: web_socket`.
+7. Implement the `WebSocket` interface from `package:web_socket`.
 
-8. Pass all conformance tests in `package: web_socket_conformance_tests`.
+8. Pass all conformance tests in `package:web_socket_conformance_tests`.
 
 9. Publish the package to [pub.dev][pub]!
 
@@ -102,11 +102,11 @@ Additionally, I created another PR in the [Dart Native][dart native] repository:
 | --- | --- | --- | --- |
 | 1 | [dart-lang/http][dart http] | [[http_client_conformance_tests] Add flag to skip tests for folded headers #1219][1219] | Closed :white_check_mark: |
 | 2 | [dart-lang/http][dart http] | [\[ok_http\] Support Android Keystore PrivateKeys #1237][1237] | Open :warning: |
-| 3 | [dart-lang/native][dart native] | [[jni] Deadlock when calling `Interceptor.Chain.proceed()` via bindings of Kotlin Package: `OkHttp` #1337][1337] | Open :warning: |
+| 3 | [dart-lang/native][dart native] | [[jni] Deadlock when calling `Interceptor.Chain.proceed()` via bindings of Kotlin package:`OkHttp` #1337][1337] | Open :warning: |
 
 ## Outcome
 
-After around 75 days of consistent contributions and development (excluding the sample project development period), `package: ok_http` was released on August 5th, 2024. The package was published to [pub.dev][pub], and is now available for use by the Flutter Community. :partying_face::tada:
+After around 75 days of consistent contributions and development (excluding the sample project development period), `package:ok_http` was released on August 5th, 2024. The package was published to [pub.dev][pub], and is now available for use by the Flutter Community. :partying_face::tada:
 
 Click here to see [ok_http ![pub package](https://img.shields.io/pub/v/ok_http.svg)][ok_http]
 
@@ -114,11 +114,11 @@ All the milestones were adequately completed, and the package passed all the HTT
 
 Interestingly, using the package leads to a valuable reduction in the APK size of Flutter applications, adding to its benefits.
 
-`package: ok_http` is now a part of the Dart HTTP mono-repo, and is expected to be maintained by both myself and the Dart Team.
+`package:ok_http` is now a part of the Dart HTTP mono-repo, and is expected to be maintained by both myself and the Dart Team.
 
 ## Challenges
 
-Although JNIgen is a powerful tool, it is an experimental package. An array of issues piled up while generating bindings for OkHttp, especially while making `package: ok_http` conformant.
+Although JNIgen is a powerful tool, it is an experimental package. An array of issues piled up while generating bindings for OkHttp, especially while making `package:ok_http` conformant.
 
 The first issue, whose severity went unnoticed, was due to threading model of JNI.
 
@@ -158,9 +158,9 @@ Just like the redirects, the WebSocket conformance tests were also quite strict 
 
 ## Future Work & Maintenance
 
-`package: ok_http` turned out to be a great success. Smaller APK sizes, WebSocket support, Flutter DevTools Networking Tab support, and a seamless integration with the Dart HTTP mono-repo, are some of the highlights of the project.
+`package:ok_http` turned out to be a great success. Smaller APK sizes, WebSocket support, Flutter DevTools Networking Tab support, and a seamless integration with the Dart HTTP mono-repo, are some of the highlights of the project.
 
-It has been a great journey, and I am looking forward to maintaining `package: ok_http` in the future, along with the Dart team. Some of the future work includes:
+It has been a great journey, and I am looking forward to maintaining `package:ok_http` in the future, along with the Dart team. Some of the future work includes:
 
 1. **Adding Response Cache Configuration:** OkHttp provides a powerful `Cache` API, which can be used to cache responses. This would be a great addition to the package.
 
@@ -168,7 +168,7 @@ It has been a great journey, and I am looking forward to maintaining `package: o
 
 ## Things I Learned
 
-1. **Flutter Integration Testing: I learned how to write integration tests for Flutter applications, and how to test the HTTP Client using the `package: http_client_conformance_tests`.
+1. **Flutter Integration Testing: I learned how to write integration tests for Flutter applications, and how to test the HTTP Client using the `package:http_client_conformance_tests`.
 
 2. **JNI Threading Model:** A HUGE thanks to [Hossein Yousefi][HosseinYousefi] (although not the assigned mentor in this project, he went out of his way to review my PRs and schedule demo meetings, and answer all of my doubts) for helping me understand the threading model of JNI, and how to work around it.
 
